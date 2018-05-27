@@ -30,16 +30,15 @@ export default Service.extend({
         });
 
         this.get('client').add(magnetURI, (torrent) => {
-
             console.log('Client is downloading:', torrent.infoHash);
-            torrentInfo.name = torrent.name;
+            // torrentInfo.name = torrent.name;
 
             torrent.files.forEach(function (file) {
 
-                torrentInfo.files.push({
-                    name: file.name,
-                    path: file.path,
-                });
+                // torrentInfo.files.push({
+                //     name: file.name,
+                //     path: file.path,
+                // });
 
                 file.appendTo('body');
 
@@ -58,15 +57,6 @@ export default Service.extend({
             this.get('torrents').push(torrentInfo);
         })
     },
-
-    //
-    // getDownloadSpeed(){
-    //     return this.get('client').downloadSpeed;
-    // },
-    //
-    // getUploadSpeed(){
-    //     return this.get('client').uploadSpeed;
-    // },
 
     loadTorrentsFromFile() {
         $.getJSON("database.json")

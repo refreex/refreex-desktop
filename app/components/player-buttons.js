@@ -1,30 +1,38 @@
 import Component from '@ember/component';
+import { inject as service } from '@ember/service';
+import { computed } from '@ember/object';
+import FileSaverMixin from 'ember-cli-file-saver/mixins/file-saver';
 
-
-export default Component.extend({
+export default Component.extend(FileSaverMixin, {
+    webtorrentService: service(),
+    torrentMagnetLink: null,
     init() {
         this._super(...arguments);
-        console.log(1);
-        var client = new WebTorrent(); // eslint-disable-line no-undef
-        //VIDEO:
-        // var torrentId = 'magnet:?xt=urn:btih:08ada5a7a6183aae1e09d831df6748d566095a10&dn=Sintel&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.empire-js.us%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com&ws=https%3A%2F%2Fwebtorrent.io%2Ftorrents%2F&xs=https%3A%2F%2Fwebtorrent.io%2Ftorrents%2Fsintel.torrent'
+        this.set('torrentMagnetLink', 'magnet:?xt=urn:btih:a88fda5954e89178c372716a6a78b8180ed4dad3&dn=The+WIRED+CD+-+Rip.+Sample.+Mash.+Share&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com&tr=wss%3A%2F%2Ftracker.webtorrent.io&ws=https%3A%2F%2Fwebtorrent.io%2Ftorrents%2F');
+        this.set('client', this.get('webtorrentService').getClient());
+    },
 
-        //Music
-        var torrentId = 'magnet:?xt=urn:btih:3f3ebfba71081257f9ffb5fd2a63e58679551da9&dn=The+Doors+-+The+Best+Of+The+Doors&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969'
+    ratio: computed('client.ratio', function() {
+        return this.get('client').ratio;
+    }),
 
-        client.add(torrentId, function (torrent) {
-            // console.log(torrent.files);
-            // // Torrents can contain many files. Let's use the .mp4 file
-            // var file = torrent.files.find(function (file) {
-            //     console.log(file)
-            //     return file.name.endsWith('.mp3')
-            // })
+    downloadSpeed: computed('client.downloadSpeed', function() {
+        return this.get('client').uploadSpeed;
+    }),
 
-            this.set('example', torrent.files);
+    uploadSpeed: computed('client.uploadSpeed', function() {
+        return this.get('client').downloadSpeed;
+    }),
 
-            // Display the file by adding it to the DOM. Supports video, audio, image, etc. files
-            // file.appendTo('body')
-        })
-        console.log(2,2 ,this.get('example'));
-    }
+    actions: {
+
+        addTorrent(torrentMagnetLink){
+            this.get('webtorrentService').addTorrent(torrentMagnetLink);
+        },
+
+        saveAllTorrents(){
+            let content = this.get('webtorrentService').saveAllTorrentsMagnetLink();
+            this.saveFileAs(this.get('filename'), content, "text/plain, application/json");
+        }
+    },
 });

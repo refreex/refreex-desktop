@@ -1,3 +1,18 @@
 <div class="playlist"></div>
+Download Speed {{downloadSpeed}}
+<br>
+Up Speed {{uploadSpeed}}
+<br><br>
+Ratio {{ratio}}
+
+<br><br>
+
 {{example}}
-ZXeb
+{{isTorrentReady}}
+{{input value=torrentMagnetLink}}
+
+<button {{action "addTorrent" torrentMagnetLink }}>Add Magnet Link</button>
+<br>
+<button {{action "saveAllTorrents" }}>Save Database</button>
+
+

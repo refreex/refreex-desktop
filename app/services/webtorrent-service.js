@@ -1,15 +1,13 @@
 import Service from '@ember/service';
-import EmberObject from '@ember/object';
-import $ from 'jquery';
+
+const client = new WebTorrent(); // eslint-disable-line no-undef
 
 export default Service.extend({
-    torrents: [],
     init() {
         this._super(...arguments);
-        const client = new WebTorrent(); // eslint-disable-line no-undef
-        console.log(client)
+        this.set('torrents', []);
         this.set('client', client);
-        this.loadTorrentsFromFile();
+        this.loadTorrentsFromDatabase();
 
         const getSet = () => {
             this.setProperties({
@@ -27,42 +25,77 @@ export default Service.extend({
     },
 
     getClient() {
-        return this.get("client");
+        return client;
     },
 
-    addTorrent(magnetURI) {
+    async addTorrent(magnetURI) {
+        let filesIncludedInTorrent = [];
+        let nameTorrent, infoHash;
 
-        let torrentInfo = EmberObject.create({
-            magnetURI: magnetURI,
-            files: []
+        await client.add(magnetURI, (torrent) => {
+            console.log('Client is downloading:', torrent.infoHash, torrent.name);
+            torrent.on('infoHash', function(){
+                console.log('why')
+            });
+
+            nameTorrent = torrent.name;
+            infoHash = torrent.infoHash;
+
+            torrent.files.forEach((file) => {
+                filesIncludedInTorrent.push(file);
+            });
+
+            torrent.on('metadata', () => {
+                console.log('metada.')
+            })
+
+            torrent.on('ready', () => {
+                console.log(2, nameTorrent, infoHash)
+                this.get('torrents').push({
+                    name: nameTorrent,
+                    infoHash: infoHash,
+                    magnetURI: magnetURI,
+                    files: filesIncludedInTorrent,
+                });
+            })
+
         });
 
-        this.get('client').add(magnetURI, (torrent) => {
-            console.log('Client is downloading:', torrent.infoHash);
 
-            torrent.files.forEach(function (file) {
-                file.appendTo('body');
-            });
 
-            this.get('torrents').push(torrentInfo);
-        })
     },
 
-    loadTorrentsFromFile() {
-        $.getJSON("database.json")
+    addTorrentToDatabase(torrentInfo) {
+        fetch('database.json')
+        .then(response => response.json())
+        .then(jsonResponse => jsonResponse.push(torrentInfo))
+            .then(JsonToSaveOnFile => console.log(234, JsonToSaveOnFile))
+    },
+
+    loadTorrentsFromDatabase() {
+        fetch("database.json")
         .then((response) => {
-            response.forEach((torrent) => {
-                this.addTorrent(torrent.magnetURI)
+
+            if (response.status !== 200) {
+                console.error('Problem Reading the Database. Status Code: ' + response.status);
+                return;
+            }
+
+            response.json().then((data) => {
+                data.forEach((torrent) => {
+                    this.addTorrent(torrent.magnetURI)
+                });
             });
+
         });
     },
 
     saveAllTorrentsMagnetLink() {
         let magnetLinks = [];
-        this.get('client').torrents.forEach((torrent) => {
+        client.torrents.forEach((torrent) => {
             magnetLinks.pushObject({
-                hash: torrent.infoHash,
                 name: torrent.name,
+                hash: torrent.infoHash,
                 magnetURI: torrent.magnetURI
             });
         });

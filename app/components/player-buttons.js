@@ -1,15 +1,42 @@
 import Component from '@ember/component';
 import { inject as service } from '@ember/service';
-import { computed } from '@ember/object';
+import { computed, observer } from '@ember/object';
 import FileSaverMixin from 'ember-cli-file-saver/mixins/file-saver';
 
 export default Component.extend(FileSaverMixin, {
     webtorrentService: service(),
-    torrentMagnetLink: null,
+    torrents: [],
+
     init() {
         this._super(...arguments);
         this.set('torrentMagnetLink', 'magnet:?xt=urn:btih:a88fda5954e89178c372716a6a78b8180ed4dad3&dn=The+WIRED+CD+-+Rip.+Sample.+Mash.+Share&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com&tr=wss%3A%2F%2Ftracker.webtorrent.io&ws=https%3A%2F%2Fwebtorrent.io%2Ftorrents%2F');
+        this.set('torrent')
+        this.getAllTorrents();
     },
+
+    getAllTorrents: observer('webtorrentService.ready', function() {
+        let torrentInformation = [];
+
+        this.get('webtorrentService').torrents.forEach((torrent) => {
+            let files = [];
+            torrent.files.forEach((file) => {
+                files.push(file);
+            });
+
+            torrentInformation.push({
+                name: torrent.name,
+                files: files,
+                infoHash: torrent.infoHash,
+            });
+        });
+
+        this.get('torrents').push(torrentInformation);
+    }),
+
+    // prepareDomElementForFile(fileName) {
+    //     const g = document.createElement('div');
+    //     g.setAttribute("id", fileName);
+    // },
 
     ratio: computed('webtorrentService.ratio', function() {
         return this.get('webtorrentService').ratio;
@@ -26,6 +53,7 @@ export default Component.extend(FileSaverMixin, {
     progress: computed('webtorrentService.progress', function() {
         return this.get('webtorrentService').progress;
     }),
+
 
     actions: {
 

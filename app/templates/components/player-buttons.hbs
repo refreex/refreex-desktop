@@ -8,6 +8,10 @@ Ratio {{ratio}}
 Progress {{progress}}
 <br><br>
 
+{{#each torrents as |torrentUnit|}}
+    {{album-thumbnail torrent=torrentUnit}}
+{{/each}}
+
 {{example}}
 {{isTorrentReady}}
 {{input value=torrentMagnetLink}}

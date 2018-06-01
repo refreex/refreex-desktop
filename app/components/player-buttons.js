@@ -9,19 +9,22 @@ export default Component.extend(FileSaverMixin, {
     init() {
         this._super(...arguments);
         this.set('torrentMagnetLink', 'magnet:?xt=urn:btih:a88fda5954e89178c372716a6a78b8180ed4dad3&dn=The+WIRED+CD+-+Rip.+Sample.+Mash.+Share&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com&tr=wss%3A%2F%2Ftracker.webtorrent.io&ws=https%3A%2F%2Fwebtorrent.io%2Ftorrents%2F');
-        this.set('client', this.get('webtorrentService').getClient());
     },
 
-    ratio: computed('client.ratio', function() {
-        return this.get('client').ratio;
+    ratio: computed('webtorrentService.ratio', function() {
+        return this.get('webtorrentService').ratio;
     }),
 
-    downloadSpeed: computed('client.downloadSpeed', function() {
-        return this.get('client').uploadSpeed;
+    downloadSpeed: computed('webtorrentService.downloadSpeed', function() {
+        return this.get('webtorrentService').downloadSpeed;
     }),
 
-    uploadSpeed: computed('client.uploadSpeed', function() {
-        return this.get('client').downloadSpeed;
+    uploadSpeed: computed('webtorrentService.uploadSpeed', function() {
+        return this.get('webtorrentService').uploadSpeed;
+    }),
+
+    progress: computed('webtorrentService.progress', function() {
+        return this.get('webtorrentService').progress;
     }),
 
     actions: {

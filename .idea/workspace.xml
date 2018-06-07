@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1174d056-e9e8-4656-8c0d-fd71884a82ba" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/player-buttons.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/player-buttons.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services/webtorrent-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/webtorrent-service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/components/player-buttons.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/components/player-buttons.hbs" afterDir="false" />
@@ -29,8 +31,8 @@
           <file leaf-file-name="player-buttons.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/components/player-buttons.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="558">
-                  <caret line="35" selection-start-line="35" selection-end-line="39" />
+                <state relative-caret-position="459">
+                  <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -38,29 +40,29 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="player-buttons.hbs" pinned="false" current-in-tab="false">
+          <file leaf-file-name="player-buttons.hbs" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/templates/components/player-buttons.hbs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" column="32" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="32" />
+                <state relative-caret-position="17">
+                  <caret line="1" column="28" lean-forward="true" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="webtorrent-service.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="webtorrent-service.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/services/webtorrent-service.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="434">
-                  <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+                <state relative-caret-position="153">
+                  <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="album-thumbnail.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/components/album-thumbnail.js">
+          <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/package.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="187">
-                  <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
+                <state relative-caret-position="357">
+                  <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
                 </state>
               </provider>
             </entry>
@@ -68,24 +70,54 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file leaf-file-name="album-thumbnail.hbs" pinned="false" current-in-tab="true">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="album-thumbnail.hbs" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/templates/components/album-thumbnail.hbs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="17">
-                  <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+                <state relative-caret-position="68">
+                  <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="player-buttons.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/components/player-buttons.js">
+          <file leaf-file-name="album-thumbnail.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/components/album-thumbnail.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="10" selection-start-line="10" selection-end-line="11" />
+                <state relative-caret-position="153">
+                  <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/app.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="68">
+                  <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+                  <folding>
+                    <element signature="e#0#45#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ember-cli-build.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/ember-cli-build.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="425">
+                  <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="environment.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/config/environment.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="582">
+                  <caret line="48" selection-start-line="48" selection-end-line="48" />
                 </state>
               </provider>
             </entry>
@@ -111,13 +143,23 @@
       <find>console</find>
       <find>addTorrent</find>
       <find>this.get(&quot;client&quot;).</find>
-      <find>client</find>
       <find>`</find>
       <find>EmberObject</find>
-      <find>torrents</find>
       <find>\</find>
       <find>getAllToorrents</find>
       <find>appendChild</find>
+      <find>example</find>
+      <find>isTorrentReady</find>
+      <find>filename</find>
+      <find>torrents</find>
+      <find>client</find>
+      <find>getSet</find>
+      <find>obs</find>
+      <find>123</find>
+      <find>loadTorrentsFromDatabase</find>
+      <find>name</find>
+      <find>jaja</find>
+      <find>jjaja</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -133,11 +175,13 @@
         <option value="$PROJECT_DIR$/app/templates/application.hbs" />
         <option value="$PROJECT_DIR$/vendor/database.json" />
         <option value="$PROJECT_DIR$/public/database.json" />
-        <option value="$PROJECT_DIR$/app/templates/components/player-buttons.hbs" />
+        <option value="$PROJECT_DIR$/config/environment.js" />
+        <option value="$PROJECT_DIR$/app/app.js" />
         <option value="$PROJECT_DIR$/app/templates/components/album-thumbnail.hbs" />
-        <option value="$PROJECT_DIR$/app/components/album-thumbnail.js" />
+        <option value="$PROJECT_DIR$/app/templates/components/player-buttons.hbs" />
         <option value="$PROJECT_DIR$/app/components/player-buttons.js" />
         <option value="$PROJECT_DIR$/app/services/webtorrent-service.js" />
+        <option value="$PROJECT_DIR$/app/components/album-thumbnail.js" />
       </list>
     </option>
   </component>
@@ -166,8 +210,8 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="width" value="977" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1920" />
     <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -178,7 +222,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -194,12 +237,6 @@
             <path>
               <item name="example" type="b2602c69:ProjectViewProjectNode" />
               <item name="example" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="example" type="b2602c69:ProjectViewProjectNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -211,6 +248,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -256,11 +294,14 @@
       <workItem from="1527215972395" duration="1144000" />
       <workItem from="1527217167538" duration="2554000" />
       <workItem from="1527388189861" duration="25847000" />
+      <workItem from="1528179135173" duration="8108000" />
+      <workItem from="1528281608638" duration="98000" />
+      <workItem from="1528353974522" duration="10678000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43373000" />
+    <option name="totallyTimeSpent" value="65586000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -275,61 +316,48 @@
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.3292683" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3292683" />
-      <window_info anchor="bottom" id="Run" order="3" />
-      <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.19303483" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14007372" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" show_stripe_button="false" weight="0.32987013" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="16" show_stripe_button="false" />
+      <window_info anchor="bottom" id="TODO" order="15" weight="0.3292683" />
+      <window_info anchor="bottom" id="Event Log" order="17" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="19" weight="0.3292683" />
       <window_info id="npm" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info content_ui="combo" id="Project" order="1" weight="0.30010277" />
+      <window_info anchor="bottom" id="Run" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="18" visible="true" weight="0.19502488" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.19648562" />
+      <window_info anchor="bottom" id="Docker" order="16" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="15" weight="0.3292683" />
-      <window_info anchor="bottom" id="Version Control" order="19" weight="0.3292683" />
-      <window_info anchor="bottom" id="Run" order="6" />
-      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="bottom" id="Event Log" order="17" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32976654" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="18" visible="true" weight="0.19502488" />
-      <window_info id="Favorites" order="7" side_tool="true" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="3" />
-      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30010277" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.3292683" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3292683" />
+      <window_info anchor="bottom" id="Run" order="3" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.32976654" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.19552529" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.3292683" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info id="Favorites" order="3" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -583,28 +611,11 @@
     <entry file="file://$PROJECT_DIR$/.eslintignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.watchmanconfig">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/resolver.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ember-cli-build.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-592" />
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/application.hbs">
       <provider selected="true" editor-type-id="text-editor">
@@ -612,9 +623,6 @@
           <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.js">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/public/database.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -630,31 +638,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ember-cli-build.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="582">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/components/album-thumbnail.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/album-thumbnail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="53" selection-start-line="11" selection-start-column="53" selection-end-line="11" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/components/player-buttons.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="32" />
+        <state relative-caret-position="68">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/player-buttons.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="35" selection-start-line="35" selection-end-line="39" />
+        <state relative-caret-position="459">
+          <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -663,8 +688,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/services/webtorrent-service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+        <state relative-caret-position="153">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/components/player-buttons.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="28" lean-forward="true" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/album-thumbnail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

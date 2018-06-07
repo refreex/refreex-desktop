@@ -5,10 +5,16 @@ const client = new WebTorrent(); // eslint-disable-line no-undef
 export default Service.extend({
     init() {
         this._super(...arguments);
-        this.set('torrents', []);
-        this.set('client', client);
+        this.getPropertiesClientEverySecond();
         this.loadTorrentsFromDatabase();
+    },
 
+    getClient() {
+        return client;
+    },
+
+    getPropertiesClientEverySecond() {
+        //TODO: Create something accurate..
         const getSet = () => {
             this.setProperties({
                 ready: client.ready,
@@ -18,57 +24,24 @@ export default Service.extend({
                 progress: client.progress,
                 enableWebSeeds: client.enableWebSeeds,
                 maxConns: client.maxConns,
+                torrents: client.torrents,
             });
             setTimeout(getSet, 1000);
         };
         setTimeout(getSet, 1000);
     },
 
-    getClient() {
-        return client;
-    },
-
-    async addTorrent(magnetURI) {
-        let filesIncludedInTorrent = [];
-        let nameTorrent, infoHash;
-
-        await client.add(magnetURI, (torrent) => {
+    addTorrent(magnetURI) {
+        client.add(magnetURI, async (torrent) => {
             console.log('Client is downloading:', torrent.infoHash, torrent.name);
-            torrent.on('infoHash', function(){
-                console.log('why')
-            });
-
-            nameTorrent = torrent.name;
-            infoHash = torrent.infoHash;
-
-            torrent.files.forEach((file) => {
-                filesIncludedInTorrent.push(file);
-            });
-
-            torrent.on('metadata', () => {
-                console.log('metada.')
-            })
-
-            torrent.on('ready', () => {
-                console.log(2, nameTorrent, infoHash)
-                this.get('torrents').push({
-                    name: nameTorrent,
-                    infoHash: infoHash,
-                    magnetURI: magnetURI,
-                    files: filesIncludedInTorrent,
-                });
-            })
-
+            await torrent.on('ready', function () {console.log('as')});
         });
-
-
-
     },
 
     addTorrentToDatabase(torrentInfo) {
         fetch('database.json')
-        .then(response => response.json())
-        .then(jsonResponse => jsonResponse.push(torrentInfo))
+            .then(response => response.json())
+            .then(jsonResponse => jsonResponse.push(torrentInfo))
             .then(JsonToSaveOnFile => console.log(234, JsonToSaveOnFile))
     },
 
@@ -82,8 +55,8 @@ export default Service.extend({
             }
 
             response.json().then((data) => {
-                data.forEach((torrent) => {
-                    this.addTorrent(torrent.magnetURI)
+                data.forEach((object) => {
+                    this.addTorrent(object.magnetURI)
                 });
             });
 

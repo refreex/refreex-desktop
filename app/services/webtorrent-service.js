@@ -1,4 +1,5 @@
 import Service from '@ember/service';
+import { computed  } from '@ember/object'
 
 const client = new WebTorrent(); // eslint-disable-line no-undef
 
@@ -6,11 +7,14 @@ export default Service.extend({
     init() {
         this._super(...arguments);
         this.getPropertiesClientEverySecond();
-        this.loadTorrentsFromDatabase();
+        this.addObserver('ready', this, 'isClientReady');
     },
 
-    getClient() {
-        return client;
+    isClientReady() {
+        if (client && client.ready === true) {
+            this.loadTorrentsFromDatabase();
+            this.get('albums');
+        }
     },
 
     getPropertiesClientEverySecond() {
@@ -25,6 +29,7 @@ export default Service.extend({
                 enableWebSeeds: client.enableWebSeeds,
                 maxConns: client.maxConns,
                 torrents: client.torrents,
+                torrentsLength: client.torrents.length,
             });
             setTimeout(getSet, 1000);
         };
@@ -32,17 +37,22 @@ export default Service.extend({
     },
 
     addTorrent(magnetURI) {
-        client.add(magnetURI, async (torrent) => {
-            console.log('Client is downloading:', torrent.infoHash, torrent.name);
-            await torrent.on('ready', function () {console.log('as')});
+        client.add(magnetURI, (torrent) => {
+            // Got torrent metadata!
+            console.log('Client is downloading:', torrent.infoHash)
+        });
+
+        const torrent = client.get(magnetURI);
+        torrent.on('ready', function(){
+            return torrent;
         });
     },
 
     addTorrentToDatabase(torrentInfo) {
         fetch('database.json')
-            .then(response => response.json())
-            .then(jsonResponse => jsonResponse.push(torrentInfo))
-            .then(JsonToSaveOnFile => console.log(234, JsonToSaveOnFile))
+        .then(response => response.json())
+        .then(jsonResponse => jsonResponse.push(torrentInfo))
+        .then(JsonToSaveOnFile => console.log(234, JsonToSaveOnFile))
     },
 
     loadTorrentsFromDatabase() {
@@ -56,7 +66,7 @@ export default Service.extend({
 
             response.json().then((data) => {
                 data.forEach((object) => {
-                    this.addTorrent(object.magnetURI)
+                    this.addTorrent(object.magnetURI);
                 });
             });
 

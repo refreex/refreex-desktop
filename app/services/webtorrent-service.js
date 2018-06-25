@@ -1,19 +1,19 @@
 import Service from '@ember/service';
-import { computed  } from '@ember/object'
 
 const client = new WebTorrent(); // eslint-disable-line no-undef
 
 export default Service.extend({
+
     init() {
         this._super(...arguments);
-        this.getPropertiesClientEverySecond();
         this.addObserver('ready', this, 'isClientReady');
+        this.getPropertiesClientEverySecond();
     },
 
     isClientReady() {
         if (client && client.ready === true) {
+            this.set('torrents', []);
             this.loadTorrentsFromDatabase();
-            this.get('albums');
         }
     },
 
@@ -28,8 +28,6 @@ export default Service.extend({
                 progress: client.progress,
                 enableWebSeeds: client.enableWebSeeds,
                 maxConns: client.maxConns,
-                torrents: client.torrents,
-                torrentsLength: client.torrents.length,
             });
             setTimeout(getSet, 1000);
         };
@@ -39,12 +37,12 @@ export default Service.extend({
     addTorrent(magnetURI) {
         client.add(magnetURI, (torrent) => {
             // Got torrent metadata!
-            console.log('Client is downloading:', torrent.infoHash)
+            console.log('Client is downloading:', torrent.infoHash);
         });
 
         const torrent = client.get(magnetURI);
-        torrent.on('ready', function(){
-            return torrent;
+        torrent.on('ready', () => {
+            this.get('torrents').pushObject(torrent);
         });
     },
 
@@ -52,7 +50,7 @@ export default Service.extend({
         fetch('database.json')
         .then(response => response.json())
         .then(jsonResponse => jsonResponse.push(torrentInfo))
-        .then(JsonToSaveOnFile => console.log(234, JsonToSaveOnFile))
+        // .then(JsonToSaveOnFile => console.log(234, JsonToSaveOnFile))
     },
 
     loadTorrentsFromDatabase() {

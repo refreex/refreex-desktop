@@ -12,8 +12,20 @@ export default Component.extend(FileSaverMixin, {
         this.set('torrentMagnetLink', 'magnet:?xt=urn:btih:488e92705ff269cf6a422c02deaf04573d4ead28&dn=Carlos+Gardel+-+The+Best+of+Carlos+Gardel+(Big+Papi)+Argentina+Tango+1930s&tr=udp%3A%2F%2Fexodus.desync.com%3A6969&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com');
     },
 
-    torrents: computed('webtorrentService.torrents', function() {
-        return this.get('webtorrentService').torrents;
+    albums: computed('webtorrentService.torrents.[]', function() {
+        const webtorrent = this.get('webtorrentService');
+        if (webtorrent.ready && webtorrent.torrents.length >= 1) {
+
+            return this.get('webtorrentService').torrents.map((val) => {
+                return {
+                    name: val.name,
+                    files: val.files,
+                    downloadSpeed: val.downloadSpeed,
+                    magnetURI: val.magnetURI
+                }
+            });
+
+        }
     }),
 
     ratio: computed('webtorrentService.ratio', function() {
@@ -44,6 +56,15 @@ export default Component.extend(FileSaverMixin, {
         saveAllTorrents(){
             let content = this.get('webtorrentService').saveAllTorrentsMagnetLink();
             this.saveFileAs('nameFile', content, "text/plain, application/j§son");
-        }
+        },
+
+        playSong(file) {
+            let divContent = document.getElementById(`a${file.length}`).innerHTML;
+            if (!divContent) {
+                file.appendTo(`#a${file.length}`, function(err, elem){
+                    console.log(1234, err, elem);
+                });
+            }
+        },
     },
 });

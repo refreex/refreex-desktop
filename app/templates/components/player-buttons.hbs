@@ -9,12 +9,15 @@ Ratio {{ratio}}
 Progress {{progress}}
 <br><br>
 
-{{#each torrents as |torrentUnit|}}
-    {{album-thumbnail torrent=torrentUnit}}
+{{#each albums as |album|}}
+    Album name: {{album.name}}
+    <br>
+    {{#each album.files as |file|}}
+        <a {{action 'playSong' file}}>{{file.name}}</a> <br>
+        <div id="a{{file.length}}"></div>
+    {{/each}}
 {{/each}}
 
-{{example}}
-{{isTorrentReady}}
 {{input value=torrentMagnetLink}}
 
 <button {{action "addTorrent" torrentMagnetLink }}>Add Magnet Link</button>

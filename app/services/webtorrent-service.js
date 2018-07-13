@@ -1,6 +1,12 @@
 import Service from '@ember/service';
+import WebTorrent from 'npm:webtorrent-hybrid';
+const fs = requireNode("fs");
+// const crypto = requireNode('crypto');
+// const zeroFill = requireNode('zero-fill');
+// const defaultAnnounceList = requireNode('create-torrent');
 
-const client = new WebTorrent(); // eslint-disable-line no-undef
+let client = new WebTorrent();
+
 
 export default Service.extend({
 
@@ -54,20 +60,9 @@ export default Service.extend({
     },
 
     loadTorrentsFromDatabase() {
-        fetch("database.json")
-        .then((response) => {
-
-            if (response.status !== 200) {
-                console.error('Problem Reading the Database. Status Code: ' + response.status);
-                return;
-            }
-
-            response.json().then((data) => {
-                data.forEach((object) => {
-                    this.addTorrent(object.magnetURI);
-                });
-            });
-
+        const database = JSON.parse(fs.readFileSync(`${__dirname}/database.json`, 'utf8'));
+        database.forEach((object) => {
+            this.addTorrent(object.magnetURI);
         });
     },
 

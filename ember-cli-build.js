@@ -21,7 +21,7 @@ module.exports = function(defaults) {
   // along with the exports of each module as its value.
 
 
-  app.import('vendor/webtorrent.min.js');
+  // app.import('vendor/webtorrent.min.js');
 
   return app.toTree();
 };

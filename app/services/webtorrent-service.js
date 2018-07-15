@@ -1,12 +1,9 @@
 import Service from '@ember/service';
 import WebTorrent from 'npm:webtorrent-hybrid';
 const fs = requireNode("fs");
-// const crypto = requireNode('crypto');
-// const zeroFill = requireNode('zero-fill');
-// const defaultAnnounceList = requireNode('create-torrent');
+const prettyBytes = requireNode('prettier-bytes');
 
 let client = new WebTorrent();
-
 
 export default Service.extend({
 
@@ -28,8 +25,8 @@ export default Service.extend({
         const getSet = () => {
             this.setProperties({
                 ready: client.ready,
-                downloadSpeed: client.downloadSpeed,
-                uploadSpeed: client.uploadSpeed,
+                downloadSpeed: prettyBytes(client.downloadSpeed),
+                uploadSpeed: prettyBytes(client.uploadSpeed),
                 ratio: client.ratio,
                 progress: client.progress,
                 enableWebSeeds: client.enableWebSeeds,
@@ -50,13 +47,18 @@ export default Service.extend({
         torrent.on('ready', () => {
             this.get('torrents').pushObject(torrent);
         });
+
+        // torrent.on('done', () => {
+        //
+        //     const torrent = this.get('torrents').find(x => x.infoHash === torrent.infoHash);
+        //
+        // });
     },
 
     addTorrentToDatabase(torrentInfo) {
-        fetch('database.json')
-        .then(response => response.json())
-        .then(jsonResponse => jsonResponse.push(torrentInfo))
-        // .then(JsonToSaveOnFile => console.log(234, JsonToSaveOnFile))
+        const database = JSON.parse(fs.readFileSync(`${__dirname}/database.json`, 'utf8'));
+        database.push(torrentInfo);
+
     },
 
     loadTorrentsFromDatabase() {

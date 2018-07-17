@@ -1,9 +1,17 @@
-{{#each albums as |album|}}
-    {{log album.image}}
-    {{album.name}}
-    <br>
-    {{#each album.files as |file|}}
-        <a {{action 'playSong' file}}>{{file.name}}</a> <br>
-        <div id="a{{file.length}}"></div>
+<div id="albums">
+    {{#each albums as |album|}}
+        <div id="div{{album.infoHash}}">
+            <b {{action 'toggleAlbum'}}>{{album.name}}</b>
+            <br>
+
+            <div style="display:{{if isOpen "block" "none"}}">
+                {{#each album.files as |file|}}
+                    {{input type="checkbox" checked=file.checked change=(action "addSongToPlaylist" album file) }}
+                    <a {{action 'playSong' file}}>{{file.name}}</a>
+                    <br>
+                {{/each}}
+            </div>
+
+        </div>
     {{/each}}
-{{/each}}
+</div>

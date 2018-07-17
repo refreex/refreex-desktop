@@ -1,5 +1,5 @@
 import Service from '@ember/service';
-import WebTorrent from 'npm:webtorrent-hybrid';
+import WebTorrent from 'npm:webtorrent';
 const fs = requireNode("fs");
 const prettyBytes = requireNode('prettier-bytes');
 
@@ -17,6 +17,7 @@ export default Service.extend({
         if (client && client.ready === true) {
             this.set('torrents', []);
             this.loadTorrentsFromDatabase();
+            this.removeObserver('ready', this, 'isClientReady');
         }
     },
 
@@ -73,7 +74,7 @@ export default Service.extend({
         client.torrents.forEach((torrent) => {
             magnetLinks.pushObject({
                 name: torrent.name,
-                hash: torrent.infoHash,
+                infoHash: torrent.infoHash,
                 magnetURI: torrent.magnetURI
             });
         });

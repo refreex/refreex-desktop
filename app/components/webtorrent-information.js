@@ -36,7 +36,7 @@ export default Component.extend(FileSaverMixin, {
 
         saveAllTorrents(){
             let content = this.get('webtorrentService').saveAllTorrentsMagnetLink();
-            this.saveFileAs('nameFile', content, "text/plain, application/j§son");
+            this.saveFileAs('nameFile', content, "text/plain, application/json");
         },
 
     },

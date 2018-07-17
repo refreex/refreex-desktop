@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1174d056-e9e8-4656-8c0d-fd71884a82ba" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ember-quickstart.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ember-quickstart.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/album-thumbnail.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/player-buttons.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/webtorrent-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/webtorrent-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/albums.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/albums.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/application.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/components/album-thumbnail.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/components/player-buttons.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -262,11 +252,9 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="-648" />
-    <option name="y" value="-900" />
-    <option name="width" value="1440" />
-    <option name="height" value="900" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -368,7 +356,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114637000" />
+    <option name="totallyTimeSpent" value="115252000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -380,8 +368,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="15" weight="0.3292683" />
       <window_info anchor="bottom" id="Event Log" order="17" side_tool="true" />

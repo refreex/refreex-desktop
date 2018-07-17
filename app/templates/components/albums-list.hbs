@@ -1,0 +1,9 @@
+{{#each albums as |album|}}
+    {{log album.image}}
+    {{album.name}}
+    <br>
+    {{#each album.files as |file|}}
+        <a {{action 'playSong' file}}>{{file.name}}</a> <br>
+        <div id="a{{file.length}}"></div>
+    {{/each}}
+{{/each}}

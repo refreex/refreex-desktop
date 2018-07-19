@@ -9,7 +9,6 @@ export default Component.extend(FileSaverMixin, {
     webtorrentService: service(),
     playlistsService: service(),
     isOpen: true,
-    isChecked: false,
 
     albums: computed('webtorrentService.torrents.[]', function() {
         const webtorrent = this.get('webtorrentService');
@@ -35,8 +34,7 @@ export default Component.extend(FileSaverMixin, {
                 return {
                     name: torrent.name,
                     files: torrent.files,
-                    downloadSpeed: torrent.downloadSpeed,
-                    magnetURI: torrent.magnetURI,
+                    // downloadSpeed: torrent.downloadSpeed,
                     posterFile: posterFile ? posterFile : null,
                     infoHash: torrent.infoHash,
                 }
@@ -66,6 +64,14 @@ export default Component.extend(FileSaverMixin, {
         }
     }),
 
+    addSongToPlaylist(torrent, file) {
+        this.get('playlistsService').addSongToPlaylist(torrent, file);
+    },
+
+    removeSongFromPlaylist(torrent, file) {
+        this.get('playlistsService').removeSongFromPlaylist(torrent, file);
+    },
+
 
     actions: {
 
@@ -80,21 +86,15 @@ export default Component.extend(FileSaverMixin, {
             this.toggleProperty('isOpen');
         },
 
-        addSongToPlaylist(torrent, file) {
-            let album = this.get('playlistsService').getAlbumFromPlaylist(torrent);
-
-            if (!album) {
-                this.get('playlistsService').addAlbumToPlaylist(torrent);
-                album = this.get('playlistsService').getAlbumFromPlaylist(torrent);
+        toggleCheckboxValue(album, file) {
+            if (file.checked) {
+                this.removeSongFromPlaylist(album, file);
+                file.checked = false;
+                return;
             }
 
-            this.get('playlistsService').addFileToPlaylist(album, file.name);
+            this.addSongToPlaylist(album, file);
+            file.checked = true;
         },
-
-        removeSongFromPlaylist(torrent, fileName) {
-            let album = this.get('playlistsService').getAlbumFromPlaylist(torrent);
-            this.get('playlistsService').removeFileFromPlaylist(album, fileName);
-        },
-
     },
 });

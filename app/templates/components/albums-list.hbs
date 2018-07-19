@@ -6,7 +6,7 @@
 
             <div style="display:{{if isOpen "block" "none"}}">
                 {{#each album.files as |file|}}
-                    {{input type="checkbox" checked=file.checked change=(action "addSongToPlaylist" album file) }}
+                    {{input type="checkbox" change=(action "toggleCheckboxValue" album file) }}
                     <a {{action 'playSong' file}}>{{file.name}}</a>
                     <br>
                 {{/each}}

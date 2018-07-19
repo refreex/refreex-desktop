@@ -22,7 +22,7 @@ export default Component.extend(FileSaverMixin, {
 
         downloadPlaylist(value) {
             let content = this.get('playlistsService').savePlaylist(value);
-            this.saveFileAs(value, content, "text/plain, application/json");
+            // this.saveFileAs(value, content, "text/plain, application/json");
         },
 
     },

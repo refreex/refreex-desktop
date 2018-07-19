@@ -7,15 +7,13 @@ export default Service.extend({
     init() {
         this._super(...arguments);
         this.set('playlists', []);
-        this.set('activePlaylistName', null);
+        this.set('activePlaylistName', 'default');
         this.createPlaylist('default');
-        // this.get('playlistSelected');
     },
 
-    playlistSelected: computed('activePlaylistName,playlists.[]', function() {
-        console.log(234)
+    getPlaylistSelected( ) {
         return this.get('playlists').find((el) => el.name === this.get('activePlaylistName'));
-    }),
+    },
 
     createPlaylist(name) {
         let playlist = this.get('playlists').find((el) => el.name === name);
@@ -37,35 +35,49 @@ export default Service.extend({
         this.set('activePlaylistName', name);
     },
 
-    getAlbumFromPlaylist(torrent) {
-        return this.get('playlistSelected.albums').find((el) => el.infoHash === torrent.infoHash);
+    getAlbumFromPlaylist(album) {
+        const playlist = this.getPlaylistSelected();
+        if (playlist.albums.length > 0) {
+            return playlist.albums.find((el) => el.infoHash === album.infoHash);
+        }
     },
 
     addAlbumToPlaylist(torrent) {
-        this.get('playlistSelected.albums').push(
+        const playlist = this.getPlaylistSelected();
+        playlist.albums.push(
             {
                 "infoHash": torrent.infoHash,
                 "name": torrent.name,
-                "magnetURI": torrent.magnetURI,
+                // "magnetURI": torrent.magnetURI,
                 "files": []
             }
         );
     },
 
-    removeFileFromPlaylist(album, fileName) {
-        const index = album.files.indexOf(fileName);
+    removeSongFromPlaylist(torrent, file) {
+        let album = this.getAlbumFromPlaylist(torrent);
+        const index = album.files.indexOf(file.name);
         if (index > -1) {
-            album.splice(index, 1);
+            album.files.splice(index, 1);
         }
     },
 
-    addFileToPlaylist(album, fileName) {
-        album.files.push(fileName);
+    addSongToPlaylist(torrent, file) {
+        let album = this.getAlbumFromPlaylist(torrent);
+
+        if (!album) {
+            this.addAlbumToPlaylist(torrent)
+            album = this.getAlbumFromPlaylist(torrent);
+        }
+
+        album.files.push(file.name);
     },
 
 
     savePlaylist(name) {
         let playlist = this.get('playlists').find((el) => el.name === name);
-        return JSON.stringify(playlist, null, "\t");
+        console.log(playlist, name);
+        console.log(JSON.stringify(playlist, null, "\t"));
+        // return JSON.stringify(playlist, null, "\t");
     },
 });

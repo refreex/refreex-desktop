@@ -80,6 +80,7 @@ export default Service.extend({
     addSongToPlaylist(torrent, file) {
         let album = this.getAlbumFromPlaylist(torrent);
 
+        //If album not exist on playlist add it.
         if (!album) {
             this.addAlbumToPlaylist(torrent)
             album = this.getAlbumFromPlaylist(torrent);
@@ -95,3 +96,4 @@ export default Service.extend({
         // return JSON.stringify(playlist, null, "\t");
     },
 });
+// magnet:?xt=urn:btih:ba7e0ba8e40981e71f7cdd87336c7eb99dd530e3&dn=Imagine+Dragons+-+Night+Visions+%28Deluxe+Version%29+2013+Indie+Rock&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Fzer0day.ch%3A1337&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969

@@ -5,6 +5,11 @@ import FileSaverMixin from 'ember-cli-file-saver/mixins/file-saver';
 
 // import torrentPoster from '../utils/torrent-poster';
 
+const mediaExtensions = {
+    audio: ['.aac', '.asf', '.flac', '.m2a', '.m4a', '.mp2', '.mp4', '.mp3', '.oga', '.ogg', '.opus',
+        '.wma', '.wav', '.wv', '.wvp']
+};
+
 export default Component.extend(FileSaverMixin, {
     webtorrentService: service(),
     playlistsService: service(),
@@ -33,7 +38,7 @@ export default Component.extend(FileSaverMixin, {
 
                 return {
                     name: torrent.name,
-                    files: torrent.files,
+                    files: this.filterOnExtension(torrent, mediaExtensions.audio),
                     // downloadSpeed: torrent.downloadSpeed,
                     posterFile: posterFile ? posterFile : null,
                     infoHash: torrent.infoHash,
@@ -42,6 +47,20 @@ export default Component.extend(FileSaverMixin, {
 
         }
     }),
+
+
+    /**
+     * Filter file on a list extension, can be used to find al image files
+     * @param torrent Torrent to filter files from
+     * @param extensions File extensions to filter on
+     * @returns {number} Array of torrent file objects matching one of the given extensions
+     */
+    filterOnExtension(torrent, extensions) {
+        return torrent.files.filter(file => {
+            const extname = file.name.toLowerCase().split('.').pop();
+            return extensions.indexOf(`.${extname}`) !== -1
+        })
+    },
 
     //TODO: Implement solution like the one used in webtorrent-desktop, torrent-poster.
     displayCovers: observer('albums', function() {
@@ -96,5 +115,6 @@ export default Component.extend(FileSaverMixin, {
             this.addSongToPlaylist(album, file);
             file.checked = true;
         },
+
     },
 });

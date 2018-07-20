@@ -54,11 +54,26 @@ export default Service.extend({
         );
     },
 
+    removeAlbumFromPlaylist(album){
+        const playlist = this.getPlaylistSelected();
+        const index = playlist.albums.findIndex((el) => el.name === album.name);
+
+        if (index > -1) {
+            playlist.albums.splice(index, 1);
+        }
+    },
+
     removeSongFromPlaylist(torrent, file) {
         let album = this.getAlbumFromPlaylist(torrent);
+
         const index = album.files.indexOf(file.name);
         if (index > -1) {
             album.files.splice(index, 1);
+        }
+
+        //If there is no more songs in the album remove album from playlist
+        if (album.files.length === 0) {
+            this.removeAlbumFromPlaylist(album);
         }
     },
 
@@ -76,7 +91,6 @@ export default Service.extend({
 
     savePlaylist(name) {
         let playlist = this.get('playlists').find((el) => el.name === name);
-        console.log(playlist, name);
         console.log(JSON.stringify(playlist, null, "\t"));
         // return JSON.stringify(playlist, null, "\t");
     },

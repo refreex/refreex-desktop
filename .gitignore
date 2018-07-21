@@ -10,6 +10,7 @@
 
 # misc
 /.idea
+.idea/workspace.xml
 /.sass-cache
 /connect.lock
 /coverage/*

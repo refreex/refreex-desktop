@@ -7,7 +7,8 @@ import FileSaverMixin from 'ember-cli-file-saver/mixins/file-saver';
 
 const mediaExtensions = {
     audio: ['.aac', '.asf', '.flac', '.m2a', '.m4a', '.mp2', '.mp4', '.mp3', '.oga', '.ogg', '.opus',
-        '.wma', '.wav', '.wv', '.wvp']
+        '.wma', '.wav', '.wv', '.wvp'],
+    image: ['.gif', '.jpg', '.jpeg', '.png']
 };
 
 export default Component.extend(FileSaverMixin, {
@@ -20,34 +21,19 @@ export default Component.extend(FileSaverMixin, {
         if (webtorrent.ready && webtorrent.torrents.length >= 1) {
 
             return this.get('webtorrentService').torrents.map((torrent) => {
-
-                //TODO: find the reason of creating a function with torrent as a param is returning undefined.
-                const posterFile = torrent.files.find(function (file) {
-                    if(file.name.endsWith('.jpg')) {
-                        return file.name.endsWith('.jpg');
-                    }
-
-                    if(file.name.endsWith('.png')) {
-                        return file.name.endsWith('.png');
-                    }
-
-                    if(file.name.endsWith('.gif')) {
-                        return file.name.endsWith('.gif');
-                    }
-                });
-
+                const files = this.filterOnExtension(torrent, mediaExtensions.audio);
+                const posterFile = this.filterOnExtension(torrent, mediaExtensions.image);
                 return {
                     name: torrent.name,
-                    files: this.filterOnExtension(torrent, mediaExtensions.audio),
+                    files,
                     // downloadSpeed: torrent.downloadSpeed,
-                    posterFile: posterFile ? posterFile : null,
+                    posterFile: posterFile[0] || null,
                     infoHash: torrent.infoHash,
                 }
             });
 
         }
     }),
-
 
     /**
      * Filter file on a list extension, can be used to find al image files

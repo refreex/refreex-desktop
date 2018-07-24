@@ -1,8 +1,0 @@
-{{input value=name}}
-<button {{action "createPlaylist" name }}>Create new playlist</button>
-<br>
-
-{{#each playlists as |playlist|}}
-    <br>
-    <span {{action "selectPlaylist" playlist.name}}>{{playlist.name}}</span> -- <a href="#" {{action "downloadPlaylist" playlist.name }}>SAVE</a>
-{{/each}}

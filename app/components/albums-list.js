@@ -14,6 +14,8 @@ const mediaExtensions = {
 export default Component.extend(FileSaverMixin, {
     webtorrentService: service(),
     playlistsService: service(),
+    tagName: 'div',
+    classNames: ['content__middle'],
     isOpen: true,
 
     albums: computed('webtorrentService.torrents.[]', function() {
@@ -48,26 +50,26 @@ export default Component.extend(FileSaverMixin, {
         })
     },
 
-    //TODO: Implement solution like the one used in webtorrent-desktop, torrent-poster.
-    displayCovers: observer('albums', function() {
-        if (this.albums) {
-            this.get('albums').forEach(function(el) {
-                if (el.posterFile) {
-                    let imgElement = document.getElementById(`poster${el.infoHash}`);
-
-                    if (!imgElement) {
-                        let imgElement = document.createElement('img');
-                        imgElement.id = `poster${el.infoHash}`;
-                        imgElement.width = 200;
-                        imgElement.height = 200;
-                        document.getElementById('albums').appendChild(imgElement);
-                    }
-
-                    el.posterFile.renderTo(`img#poster${el.infoHash}`)
-                }
-            })
-        }
-    }),
+    // //TODO: Implement solution like the one used in webtorrent-desktop, torrent-poster.
+    // displayCovers: observer('albums', function() {
+    //     if (this.albums) {
+    //         this.get('albums').forEach(function(el) {
+    //             if (el.posterFile) {
+    //                 let imgElement = document.getElementById(`poster${el.infoHash}`);
+    //
+    //                 if (!imgElement) {
+    //                     let imgElement = document.createElement('img');
+    //                     imgElement.id = `poster${el.infoHash}`;
+    //                     imgElement.width = 200;
+    //                     imgElement.height = 200;
+    //                     document.getElementById('albums').appendChild(imgElement);
+    //                 }
+    //
+    //                 el.posterFile.renderTo(`img#poster${el.infoHash}`)
+    //             }
+    //         })
+    //     }
+    // }),
 
     addSongToPlaylist(torrent, file) {
         this.get('playlistsService').addSongToPlaylist(torrent, file);

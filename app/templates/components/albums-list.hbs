@@ -1,17 +1,127 @@
-<div id="albums">
-    {{#each albums as |album|}}
-        <div id="div{{album.infoHash}}">
-            <b {{action 'toggleAlbum'}}>{{album.name}}</b>
-            <br>
+<div class="artist is-verified">
 
-            <div style="display:{{if isOpen "block" "none"}}">
-                {{#each album.files as |file|}}
-                    {{input type="checkbox" change=(action "toggleCheckboxValue" album file) }}
-                    <a {{action 'playSong' file}}>{{file.name}}</a>
-                    <br>
-                {{/each}}
+
+            <div class="artist__header">
+
+                <div class="artist__info">
+
+                    <div class="profile__img">
+
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/g_eazy_propic.jpg" alt="G-Eazy" />
+
+                    </div>
+
+                    <div class="artist__info__meta">
+
+                        <div class="artist__info__type">Artist</div>
+
+                        <div class="artist__info__name">G-Eazy</div>
+
+                        <div class="artist__info__actions">
+
+                            <button class="button-dark">
+                                <i class="ion-ios-play"></i>
+                                Play
+                            </button>
+
+                            <button class="button-light">Follow</button>
+
+                            <button class="button-light more">
+                                <i class="ion-ios-more"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+                <div class="artist__listeners">
+
+                    <div class="artist__listeners__count">15,662,810</div>
+
+                    <div class="artist__listeners__label">Monthly Listeners</div>
+
+                </div>
+
+                <div class="artist__navigation">
+
+                    <ul class="nav nav-tabs" role="tablist">
+
+                        <li role="presentation" class="active">
+                            <a href="#artist-overview" aria-controls="artist-overview" role="tab" data-toggle="tab">Overview</a>
+                        </li>
+
+                        <li role="presentation">
+                            <a href="#related-artists" aria-controls="related-artists" role="tab" data-toggle="tab">Related Artists</a>
+                        </li>
+
+                        <!--<li role="presentation">
+                          <a href="#artist-about" aria-controls="artist-about" role="tab" data-toggle="tab">About</a>
+                        </li>-->
+
+                    </ul>
+
+                    <div class="artist__navigation__friends">
+
+                        <a href="#">
+                            <img src="http://zblogged.com/wp-content/uploads/2015/11/17.jpg" alt="" />
+                        </a>
+
+                        <a href="#">
+                            <img src="http://zblogged.com/wp-content/uploads/2015/11/5.png" alt="" />
+                        </a>
+
+                        <a href="#">
+                            <img src="http://cdn.devilsworkshop.org/files/2013/01/enlarged-facebook-profile-picture.jpg" alt="" />
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="artist__content">
+
+                <div class="tab-content">
+
+                    <div role="tabpanel" class="tab-pane active" id="related-artists">
+
+                        <div class="media-cards">
+
+                            {{#each albums as |album|}}
+                                <div class="media-card">
+                                    <div class="media-card__image" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/hoodie.jpg);">
+                                        <i {{action 'toggleAlbum'}} class="ion-ios-play"></i>
+                                    </div>
+                                    <a class="media-card__footer" {{action 'toggleAlbum'}}>{{album.name}}</a>
+                                </div>
+                            {{/each}}
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
-    {{/each}}
-</div>
+
+
+
+{{#each albums as |album|}}
+    <div id="div{{album.infoHash}}">
+        <div style="display:{{if isOpen "block" "none"}}">
+            {{#each album.files as |file|}}
+                {{input type="checkbox" change=(action "toggleCheckboxValue" album file) }}
+                <a {{action 'playSong' file}}>{{file.name}}</a>
+                <br>
+            {{/each}}
+        </div>
+    </div>
+{{/each}}
+

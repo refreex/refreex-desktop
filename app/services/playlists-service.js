@@ -31,6 +31,11 @@ export default Service.extend({
         this.setActivePlaylist(name);
     },
 
+    removePlaylist(name) {
+        const playlist = this.get('playlists').find((el) => el.name === name);
+        this.get('playlists').removeObject(playlist)
+    },
+
     setActivePlaylist(name) {
         this.set('activePlaylistName', name);
     },

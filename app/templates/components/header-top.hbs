@@ -1,0 +1,13 @@
+Download Speed {{downloadSpeed}} |
+Up Speed {{uploadSpeed}} |
+Ratio {{ratio}} |
+Progress {{progress}}
+
+<!--TODO: Add another icon/class to this input-->
+<div class="search">
+    {{input type="text" placeholder="Magnet Link" value=torrentMagnetLink}}
+    <button {{action "addTorrent" torrentMagnetLink }}>Add Magnet Link</button>
+</div>
+
+<!--TODO: Add another icon/class to this div-->
+<span {{action "saveAllTorrents"}} class="ion-archive header-icons"></span>

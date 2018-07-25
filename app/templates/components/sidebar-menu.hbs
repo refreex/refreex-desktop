@@ -1,0 +1,127 @@
+<!--<div class="content__left">-->
+
+    <section class="navigation">
+
+        <!-- Main -->
+        <div class="navigation__list">
+
+            <div class="navigation__list__header" role="button">
+                Main
+            </div>
+
+            <div class="collapse in" id="main">
+
+                <a href="#" class="navigation__list__item">
+                    <i class="ion-ios-browsers"></i>
+                    <span>Browse</span>
+                </a>
+
+                <a href="#" class="navigation__list__item">
+                    <i class="ion-person-stalker"></i>
+                    <span>Activity</span>
+                </a>
+
+                <a href="#" class="navigation__list__item">
+                    <i class="ion-radio-waves"></i>
+                    <span>Radio</span>
+                </a>
+
+            </div>
+
+        </div>
+        <!-- / -->
+
+        <!-- Your Music -->
+        <div class="navigation__list">
+
+            <div class="navigation__list__header" role="button">
+                Your Music
+            </div>
+
+            <div class="collapse in" id="yourMusic">
+
+                <a href="#" class="navigation__list__item">
+                    <i class="ion-headphone"></i>
+                    <span>Songs</span>
+                </a>
+
+                <a href="#" class="navigation__list__item">
+                    <i class="ion-ios-musical-notes"></i>
+                    <span>Albums</span>
+                </a>
+
+                <a href="#" class="navigation__list__item">
+                    <i class="ion-person"></i>
+                    <span>Artists</span>
+                </a>
+
+                <a href="#" class="navigation__list__item">
+                    <i class="ion-document"></i>
+                    <span>Local Files</span>
+                </a>
+
+            </div>
+
+        </div>
+        <!-- / -->
+
+        <!-- Playlists -->
+        <div class="navigation__list">
+
+            <div href="#" {{action "togglePlaylistList"}} class="navigation__list__header">
+                Playlists
+            </div>
+
+            <div style="display:{{if isOpen "block" "none"}}" id="playlists">
+
+                {{#each playlists as |playlist|}}
+                    <a href="#" class="navigation__list__item">
+                        <i {{action "downloadPlaylist" playlist.name }} class="ion-archive"></i>
+                        <i {{action "removePlaylist" playlist.name }} class="ion-close"></i>
+
+                        <span>{{playlist.name}}</span>
+                    </a>
+                {{/each}}
+
+            </div>
+
+        </div>
+        <!-- / -->
+
+    </section>
+
+    <section class="playlist" {{action "toggleAddPlaylistsForm"}}>
+        <a href="#">
+            {{#if isFormAddPlaylistOpen}}
+                <!--//TODO: Add - Icon-->
+                Cancel
+            {{else}}
+                <i class="ion-ios-plus-outline"></i>
+                New Playlist
+            {{/if}}
+        </a>
+    </section>
+
+    <!--//TODO: Change all inline styles for proper css-->
+    <section class="playlist" style="display:{{if isFormAddPlaylistOpen "block" "none"}}" >
+        {{input value=formPlaylistName placeholder="Playlist Name"}}
+        <button {{action "createPlaylist" formPlaylistName}}>Add</button>
+    </section>
+
+    <!--//TODO: Move this section where is the player.-->
+    <section class="playing">
+        <div class="playing__art">
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/cputh.jpg" alt="Album Art" />
+        </div>
+
+        <div class="playing__song">
+            <a class="playing__song__name">Some Type of Love</a>
+            <a class="playing__song__artist">Charlie Puth</a>
+        </div>
+
+        <div class="playing__add">
+            <i class="ion-checkmark"></i>
+        </div>
+    </section>
+
+<!--</div>-->

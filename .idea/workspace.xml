@@ -2,23 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1174d056-e9e8-4656-8c0d-fd71884a82ba" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/components/albums-list.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/albums-list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/playlists-list.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/webtorrent-information.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/playlists-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/playlists-service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/styles/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/application.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/application.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/components/albums-list.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/components/albums-list.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/components/playlists-list.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/components/webtorrent-information.hbs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ember-cli-build.js" beforeDir="false" afterPath="$PROJECT_DIR$/ember-cli-build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/integration/components/playlists-list-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/integration/components/webtorrent-information-test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -34,8 +21,8 @@
           <file leaf-file-name="sidebar-menu.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/components/sidebar-menu.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="425">
-                  <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+                <state relative-caret-position="313">
+                  <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -43,11 +30,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="application.hbs" pinned="false" current-in-tab="true">
+          <file leaf-file-name="application.hbs" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/templates/application.hbs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+                <state relative-caret-position="561">
+                  <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
                 </state>
               </provider>
             </entry>
@@ -65,7 +52,7 @@
             <entry file="file://$PROJECT_DIR$/app/templates/components/sidebar-menu.hbs">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="2142">
-                  <caret line="126" column="10" lean-forward="true" selection-start-line="126" selection-start-column="10" selection-end-line="126" selection-end-column="10" />
+                  <caret line="126" column="10" selection-start-line="126" selection-start-column="10" selection-end-line="126" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
@@ -79,15 +66,11 @@
               </provider>
             </entry>
           </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="albums-list.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="albums-list.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/components/albums-list.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="289">
-                  <caret line="17" column="30" selection-start-line="17" selection-end-line="18" />
+                <state relative-caret-position="308">
+                  <caret line="100" column="27" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="27" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
                   </folding>
@@ -95,15 +78,18 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="albums-list.hbs" pinned="false" current-in-tab="false">
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="albums-list.hbs" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/templates/components/albums-list.hbs">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="88" column="34" lean-forward="true" selection-start-line="88" selection-start-column="34" selection-end-line="88" selection-end-column="34" />
+                <state relative-caret-position="154">
+                  <caret line="107" column="65" selection-start-line="107" selection-start-column="65" selection-end-line="107" selection-end-column="65" />
                   <folding>
-                    <element signature="n#div#0;n#div#0;n#div#0;n#!!top" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#div#0;n#div#0;n#!!top" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -112,7 +98,7 @@
           <file leaf-file-name="header-top.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/components/header-top.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="357">
+                <state relative-caret-position="306">
                   <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
                   <folding>
                     <element signature="e#0#41#0" expanded="true" />
@@ -124,17 +110,17 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="493">
-                  <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+                <state relative-caret-position="306">
+                  <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="app.scss" pinned="false" current-in-tab="true">
+          <file leaf-file-name="app.scss" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app/styles/app.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="268">
-                  <caret line="43" column="21" lean-forward="true" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+                <state relative-caret-position="544">
+                  <caret line="1853" column="11" selection-start-line="1853" selection-start-column="1" selection-end-line="1853" selection-end-column="11" />
                 </state>
               </provider>
             </entry>
@@ -153,12 +139,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>name</find>
-      <find>playlists</find>
-      <find>downloadPlaylist</find>
-      <find>deletePlaylist</find>
-      <find>create</find>
-      <find>getPlaylist</find>
       <find>remove</find>
       <find>ion-archive</find>
       <find>.playlist</find>
@@ -183,6 +163,12 @@
       <find>'Roboto', sans-ser</find>
       <find>body</find>
       <find>playlists-list</find>
+      <find>background-color:</find>
+      <find>media_card</find>
+      <find>media</find>
+      <find>.media-cards</find>
+      <find>toggleAlbum</find>
+      <find>toggleCheckboxValue</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -223,16 +209,16 @@
         <option value="$PROJECT_DIR$/app/templates/components/playlists-list.hbs" />
         <option value="$PROJECT_DIR$/tests/integration/components/webtorrent-information-test.js" />
         <option value="$PROJECT_DIR$/app/services/playlists-service.js" />
-        <option value="$PROJECT_DIR$/app/index.html" />
         <option value="$PROJECT_DIR$/app/templates/components/sidebar-menu.hbs" />
-        <option value="$PROJECT_DIR$/app/components/albums-list.js" />
         <option value="$PROJECT_DIR$/app/components/sidebar-menu.js" />
         <option value="$PROJECT_DIR$/app/components/header-top.js" />
         <option value="$PROJECT_DIR$/app/templates/components/header-top.hbs" />
-        <option value="$PROJECT_DIR$/app/templates/components/albums-list.hbs" />
-        <option value="$PROJECT_DIR$/app/styles/app.scss" />
-        <option value="$PROJECT_DIR$/app/templates/application.hbs" />
         <option value="$PROJECT_DIR$/app/components/playlists-list.js" />
+        <option value="$PROJECT_DIR$/app/templates/application.hbs" />
+        <option value="$PROJECT_DIR$/app/styles/app.scss" />
+        <option value="$PROJECT_DIR$/app/index.html" />
+        <option value="$PROJECT_DIR$/app/components/albums-list.js" />
+        <option value="$PROJECT_DIR$/app/templates/components/albums-list.hbs" />
       </list>
     </option>
   </component>
@@ -255,7 +241,6 @@
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
-      <path value="$PROJECT_DIR$/electron-out/project/package.json" />
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
@@ -274,6 +259,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -333,7 +319,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -414,11 +399,12 @@
       <workItem from="1531440892218" duration="11224000" />
       <workItem from="1531809855207" duration="27904000" />
       <workItem from="1531995881169" duration="6411000" />
+      <workItem from="1532497581399" duration="3719000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="174334000" />
+    <option name="totallyTimeSpent" value="178026000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -431,65 +417,52 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="10" weight="0.3292683" />
+      <window_info anchor="bottom" id="TODO" order="15" weight="0.3283582" />
       <window_info anchor="bottom" id="Messages" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="17" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.3283582" />
-      <window_info anchor="bottom" id="Run" order="4" weight="0.32935324" />
-      <window_info id="npm" order="4" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.3323383" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11821086" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="19" visible="true" weight="0.3283582" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.32935324" />
+      <window_info id="npm" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="18" weight="0.23681591" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.11821086" />
+      <window_info anchor="bottom" id="Docker" order="16" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="5" weight="0.32892057" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" order="16" show_stripe_button="false" />
-      <window_info id="npm" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.1171459" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="15" weight="0.3292683" />
-      <window_info anchor="bottom" id="Version Control" order="19" visible="true" weight="0.3283582" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.32935324" />
-      <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Message" order="2" />
-      <window_info anchor="bottom" id="Event Log" order="17" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32892057" />
-      <window_info anchor="bottom" id="Terminal" order="18" weight="0.23681591" />
-      <window_info id="Favorites" order="7" side_tool="true" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="4" weight="0.32935324" />
+      <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1171459" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.3292683" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="12" visible="true" weight="0.3283582" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.32892057" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.23681591" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="12" visible="true" weight="0.3283582" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="2" />
       <window_info anchor="bottom" id="Messages" order="0" />
-      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1171459" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -504,7 +477,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/config/environment.js</url>
           <line>22</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
@@ -618,23 +590,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/app2.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="152" column="21" selection-start-line="152" selection-start-column="21" selection-end-line="152" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/app2.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/styles/app2.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="1161" selection-start-line="1161" selection-end-line="1161" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/styles/app2.scss" />
+    <entry file="file://$PROJECT_DIR$/app/styles/app2.css" />
+    <entry file="file://$PROJECT_DIR$/app/styles/app2.css" />
     <entry file="file://$PROJECT_DIR$/testem.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -672,32 +630,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/webtorrent-information.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/components/webtorrent-information.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/integration/components/webtorrent-information-test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#37#86#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/webtorrent-information.js" />
+    <entry file="file://$PROJECT_DIR$/app/templates/components/webtorrent-information.hbs" />
+    <entry file="file://$PROJECT_DIR$/tests/integration/components/webtorrent-information-test.js" />
     <entry file="file://$PROJECT_DIR$/app/services/playlists-service.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
@@ -722,44 +657,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/components/playlists-list.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/components/playlists-list.hbs" />
     <entry file="file://$PROJECT_DIR$/app/templates/components/sidebar-menu.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2142">
-          <caret line="126" column="10" lean-forward="true" selection-start-line="126" selection-start-column="10" selection-end-line="126" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/sidebar-menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+          <caret line="126" column="10" selection-start-line="126" selection-start-column="10" selection-end-line="126" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/components/header-top.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="306">
           <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/albums-list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="30" selection-start-line="17" selection-end-line="18" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -780,36 +689,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/components/albums-list.hbs">
+    <entry file="file://$PROJECT_DIR$/tests/integration/components/playlists-list-test.js" />
+    <entry file="file://$PROJECT_DIR$/app/components/playlists-list.js" />
+    <entry file="file://$PROJECT_DIR$/app/components/sidebar-menu.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="88" column="34" lean-forward="true" selection-start-line="88" selection-start-column="34" selection-end-line="88" selection-end-column="34" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#!!top" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/integration/components/playlists-list-test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="5" column="34" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/playlists-list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="313">
+          <caret line="27" column="29" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -818,15 +703,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/styles/app.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="43" column="21" lean-forward="true" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+        <state relative-caret-position="544">
+          <caret line="1853" column="11" selection-start-line="1853" selection-start-column="1" selection-end-line="1853" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/application.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="561">
+          <caret line="33" column="40" lean-forward="true" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/albums-list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="100" column="27" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/components/albums-list.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="107" column="65" selection-start-line="107" selection-start-column="65" selection-end-line="107" selection-end-column="65" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#!!top" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

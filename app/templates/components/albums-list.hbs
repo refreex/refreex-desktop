@@ -1,7 +1,7 @@
 <div class="artist is-verified">
 
 
-            <div class="artist__header">
+    <div class="artist__header">
 
                 <div class="artist__info">
 
@@ -84,26 +84,46 @@
             </div>
 
 
-            <div class="artist__content">
+    <div class="artist__content">
 
-                <div class="tab-content">
+        <div class="tab-content">
 
-                    <div role="tabpanel" class="tab-pane active" id="related-artists">
+            <div role="tabpanel" class="tab-pane active" id="related-artists">
 
-                        <div class="media-cards">
+                <div class="media-cards">
 
-                            {{#each albums as |album|}}
-                                <div class="media-card">
-                                    <div class="media-card__image" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/hoodie.jpg);">
-                                        <i {{action 'toggleAlbum'}} class="ion-ios-play"></i>
-                                    </div>
-                                    <a class="media-card__footer" {{action 'toggleAlbum'}}>{{album.name}}</a>
+                    {{#each albums as |album|}}
+                        <div class="media-card">
+                            <div class="media-card__image" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/hoodie.jpg);">
+                                <i {{action 'toggleAlbum' album}} class="ion-ios-play"></i>
+                            </div>
+                            <a class="media-card__footer" {{action 'toggleAlbum' album}}>{{album.name}}</a>
+                        </div>
+
+                        <div class="tracks">
+                            <div class="section-title">{{album.name}}</div>
+
+                            {{#each album.files as |file index|}}
+                                <div class="track">
+                                    {{input type="checkbox" change=(action "toggleCheckboxValue" album file) }}
+
+                                    <!--<div class="track__art">-->
+                                    <!--<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/7022/whenDarkOut.jpg" alt="When It's Dark Out" />-->
+                                    <!--</div>-->
+
+                                    <div class="track__number">{{index}}</div>
+
+                                    <!--<div class="track__added">-->
+                                    <!--<i class="ion-checkmark-round added"></i>-->
+                                    <!--</div>-->
+                                    <div class="track__title" {{action 'playSong' file}}>{{file.name}}</div>
+                                    <!--<div class="track__plays">147,544,165</div>-->
                                 </div>
                             {{/each}}
 
                         </div>
 
-                    </div>
+                    {{/each}}
 
                 </div>
 
@@ -111,17 +131,14 @@
 
         </div>
 
-
-
-{{#each albums as |album|}}
-    <div id="div{{album.infoHash}}">
-        <div style="display:{{if isOpen "block" "none"}}">
-            {{#each album.files as |file|}}
-                {{input type="checkbox" change=(action "toggleCheckboxValue" album file) }}
-                <a {{action 'playSong' file}}>{{file.name}}</a>
-                <br>
-            {{/each}}
-        </div>
     </div>
-{{/each}}
+
+    <!-- Popular-->
+    {{#each albums as |album|}}
+
+
+    {{/each}}
+
+</div>
+
 

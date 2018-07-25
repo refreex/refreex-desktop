@@ -89,8 +89,13 @@ export default Component.extend(FileSaverMixin, {
             });
         },
 
-        toggleAlbum() {
-            this.toggleProperty('isOpen');
+        toggleAlbum(album) {
+            if (album.isOpen === true)
+            {
+                album.isOpen = false;
+            } else {
+                album.isOpen = true;
+            }
         },
 
         toggleCheckboxValue(album, file) {

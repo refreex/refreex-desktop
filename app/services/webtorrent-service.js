@@ -56,6 +56,10 @@ export default Service.extend({
         // });
     },
 
+    getTorrent(infoHash) {
+        return client.get(infoHash);
+    },
+
     addTorrentToDatabase(torrentInfo) {
         const database = JSON.parse(fs.readFileSync(`${__dirname}/database.json`, 'utf8'));
         database.push(torrentInfo);

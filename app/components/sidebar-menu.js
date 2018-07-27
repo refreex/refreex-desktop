@@ -12,7 +12,6 @@ export default Component.extend(FileSaverMixin, {
         this._super(...arguments);
     },
 
-
     playlists: computed('playlistsService.playlists.[]', function(){
         return this.get('playlistsService.playlists');
     }),

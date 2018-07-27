@@ -8,6 +8,7 @@ const Router = EmberRouter.extend({
 
 Router.map(function() {
   this.route('albums');
+  this.route('album', {path: '/post/:info_hash'});
 });
 
 export default Router;

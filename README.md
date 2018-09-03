@@ -6,14 +6,14 @@ The mission is bring to the people the advantages of a descentralized network fo
 It can read every torrent in the network and it will show you the albums in such a way where every is there where you know, the interface is based on the design of the most famous application of music in the world. Why almost the same? Because the people know how to use it so we don't need to re-do thinks that work, the template was obtained from [https://github.com/alowenthal](https://github.com/alowenthal) but designers are more than welcome to give it some style/customisation.
 
 Thinks in a technical spec:
-  *Create API to allow the integrations of trackers/searchers.
-  *Create playlists based on selective files from differentes torrents using JSON format.
-  *The playlists should be created using DAT protocol to allow mutation of the playlist (torrents are immutables).
-  *Create API giving the possibility of install plugins.
-  
+
+  * Create API to allow the integrations of trackers/searchers.
+  * Create playlists based on selective files from differentes torrents using JSON format.
+  * The playlists should be created using DAT protocol to allow mutation of the playlist (torrents are immutables).
+  * Create API giving the possibility of install plugins.
+
   
 Any help is more than welcome, in terms of architecture of the application or design.
-
 
 
 https://codepen.io/alowenthal/pen/rxboRv

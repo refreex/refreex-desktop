@@ -13,7 +13,7 @@ Thinks in a technical spec:
   * Create API giving the possibility of install plugins.
 
   
-Any help is more than welcome, in terms of architecture of the application or design.
+Any kind help is more than welcome.
 
 
 https://codepen.io/alowenthal/pen/rxboRv

@@ -10,7 +10,7 @@ Thinks in a technical spec:
   * Create API to allow the integrations of trackers/searchers.
   * Create playlists based on selective files from differentes torrents using JSON format.
   * The playlists should be created using DAT protocol to allow mutation of the playlist (torrents are immutables).
-  * Create API giving the possibility of install plugins.
+  * Create API bringing the possibility of install plugins.
 
   
 Any kind help is more than welcome.

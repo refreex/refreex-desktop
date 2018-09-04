@@ -15,9 +15,6 @@ Thinks in a technical spec:
   
 Any kind help is more than welcome.
 
-
-https://codepen.io/alowenthal/pen/rxboRv
-
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
